@@ -3,10 +3,16 @@ from torch.utils.data import DataLoader
 from torch.utils.data.distributed import DistributedSampler
 from torch import distributed as dist
 
-def build_dataloader(args):
 
-    dataset_train = WholeBodyDataset(args, "train")
-    dataset_val = WholeBodyDataset(args, "val")
+def build_dataset(args):
+    if args.dataset == "wholebody":
+        dataset_train = WholeBodyDataset(args, "train")
+        dataset_val = WholeBodyDataset(args, "val")
+
+    return dataset_train, dataset_val
+
+
+def build_dataloader(args, dataset_train, dataset_val):
     if args.distributed:
         sampler_train = DistributedSampler(dataset_train,
                                         shuffle=True,

@@ -16,7 +16,8 @@ def save_model(model, path):
         torch.save(model.state_dict(), path)
 
 
-def load_model(model, path, device):
+def load_model(model, path, device="cuda"):
+    print("Loading model weights ...")
     state_dict = torch.load(
         path,
         map_location=device,
@@ -31,6 +32,8 @@ def load_model(model, path, device):
         model.load_state_dict(new_state_dict)
     else:
         model.load_state_dict(state_dict)
+
+    print("Weights loaded .")
 
     return model
 

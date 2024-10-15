@@ -1,0 +1,1 @@
+nohup python src/inference.py > inference.out &

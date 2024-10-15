@@ -1,6 +1,6 @@
 import os
 from src.utils.logger import Logger
-from src import models
+from src import models, data
 import torch
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch import distributed as dist
@@ -10,11 +10,11 @@ from tqdm import tqdm
 
 class Trainer():
 
-    def __init__(self, args, data_loader, model, optimizer, criterion):
+    def __init__(self, args, datasets, model, optimizer, criterion):
         self.args = args
         self.distributed = args.distributed
 
-        self.loader_train, self.loader_val = data_loader
+        self.loader_train, self.loader_val = data.build_dataloader(datasets)
         self.optimizer, self.criterion = optimizer, criterion
 
         if self.distributed:

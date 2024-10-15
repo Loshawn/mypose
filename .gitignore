@@ -1,1 +1,4 @@
-dataset/cocowholebody/*
+dataset/*
+__pycache__/
+exp/**/*.pth
+exp/**/*.png
