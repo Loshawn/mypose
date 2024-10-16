@@ -2,4 +2,5 @@ dataset/*
 __pycache__/
 exp/**/*.pth
 exp/**/*.png
-*.out
+**/*.out
+test/*

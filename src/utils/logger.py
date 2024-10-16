@@ -17,21 +17,23 @@ class Logger(object):
 
         if rank == 0:
             self._make_dir()
-
-            with open(self.dir_id + "/config.txt", "w") as f:
-                f.write(time.strftime('%Y-%m-%d-%H-%M') + "\n\n")
-                f.write('==> torch version: {}\n'.format(torch.__version__))
-                f.write('==> cudnn version: {}\n'.format(
-                    torch.backends.cudnn.version()))
-                f.write('==> Cmd:\n')
-                f.write(str(sys.argv))
-                f.write('\n==> args:\n')
-
-                for arg in vars(args):
-                    f.write(f"{arg}: {getattr(args, arg)} \n")
-                f.write("\n")
-
             self.log_file = open(self.dir_id + '/log.txt', "w")
+
+            self.log_args()
+
+    def log_args(self):
+        with open(self.dir_id + "/config.txt", "w") as f:
+            f.write(time.strftime('%Y-%m-%d-%H-%M') + "\n\n")
+            f.write('==> torch version: {}\n'.format(torch.__version__))
+            f.write('==> cudnn version: {}\n'.format(
+                torch.backends.cudnn.version()))
+            f.write('==> Cmd:\n')
+            f.write(str(sys.argv))
+            f.write('\n==> args:\n')
+
+            for arg in vars(self.args):
+                f.write(f"{arg}: {getattr(self.args, arg)} \n")
+            f.write("\n")
 
     def _make_dir(self):
         time_str = time.strftime('%Y-%m-%d-%H-%M')

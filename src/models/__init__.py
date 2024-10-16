@@ -41,7 +41,7 @@ def load_model(model, path, device="cuda"):
 def save_optimizer_and_logger(optimizer, logger, path):
     checkpoint = {
         'optimizer': optimizer.state_dict(),  # 保存优化器状态
-        'info': logger.info  # 保存 logger 的 info 信息
+        'info': logger  # 保存 logger 的 info 信息
     }
 
     torch.save(checkpoint, path)
@@ -57,3 +57,4 @@ def load_optimizer_and_logger(optimizer, path, device):
     info = checkpoint['info']
 
     return optimizer, info
+

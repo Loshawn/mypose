@@ -1,13 +1,13 @@
-2024-10-15-19-18
+2024-10-15-23-56
 
 ==> torch version: 2.4.0
 ==> cudnn version: 90100
 ==> Cmd:
-['src/train.py', '--distributed']
+['src/train.py', '--save', 'debug']
 ==> args:
 dir_root: /home/zhanghanbo/projects/mypose 
 gpu_ids: 0 
-distributed: True 
+distributed: False 
 local_rank: 0 
 use_amp: True 
 autoscale_lr: True 
@@ -23,7 +23,7 @@ flip: 0.5
 model: ViTPose 
 model_size: s 
 pretrain_path: . 
-save: ViTPose 
+save: debug 
 resume: . 
 epochs: 210 
 evaluation: {'interval': 10, 'metric': 'mAP', 'save_best': 'AP'} 

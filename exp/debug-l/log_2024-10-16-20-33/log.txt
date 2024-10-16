@@ -1,0 +1,2 @@
+[Epoch: 1 ] : Learning rate : 6.25e-08
+Train :

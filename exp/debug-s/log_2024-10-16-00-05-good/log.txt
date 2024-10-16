@@ -1,0 +1,1680 @@
+[Epoch: 1 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9571e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.000
+
+[Epoch: 2 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 1.3834e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.002
+
+[Epoch: 3 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 1.3722e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.008
+
+[Epoch: 4 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 1.3662e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.028
+
+[Epoch: 5 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 1.3494e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.087
+
+[Epoch: 6 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 1.1833e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.151
+
+[Epoch: 7 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 1.0513e-05
+
+Test :
+	Loss : 0.000
+	Acc : 0.191
+
+[Epoch: 8 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 9.9896e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.225
+
+[Epoch: 9 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 9.6373e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.244
+
+[Epoch: 10 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 9.3579e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.268
+
+[Epoch: 11 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 9.1091e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.294
+
+[Epoch: 12 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 8.8722e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.315
+
+[Epoch: 13 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 8.6377e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.336
+
+[Epoch: 14 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 8.4357e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.348
+
+[Epoch: 15 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 8.2213e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.356
+
+[Epoch: 16 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 8.0535e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.372
+
+[Epoch: 17 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.8948e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.395
+
+[Epoch: 18 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.7445e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.404
+
+[Epoch: 19 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.5950e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.411
+
+[Epoch: 20 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.4775e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.433
+
+[Epoch: 21 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.3313e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.435
+
+[Epoch: 22 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.2218e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.438
+
+[Epoch: 23 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.1259e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.451
+
+[Epoch: 24 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 7.0228e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.456
+
+[Epoch: 25 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.9165e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.475
+
+[Epoch: 26 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.8434e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.466
+
+[Epoch: 27 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.7515e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.498
+
+[Epoch: 28 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.6468e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.498
+
+[Epoch: 29 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.5515e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.510
+
+[Epoch: 30 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.4811e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.512
+
+[Epoch: 31 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.4060e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.508
+
+[Epoch: 32 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.3075e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.529
+
+[Epoch: 33 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.2290e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.538
+
+[Epoch: 34 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.1458e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.537
+
+[Epoch: 35 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 6.0691e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.554
+
+[Epoch: 36 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.9814e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.545
+
+[Epoch: 37 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.9085e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.552
+
+[Epoch: 38 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.8199e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.561
+
+[Epoch: 39 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.7742e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.575
+
+[Epoch: 40 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.6940e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.562
+
+[Epoch: 41 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.6144e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.584
+
+[Epoch: 42 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.5433e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.589
+
+[Epoch: 43 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.4695e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.600
+
+[Epoch: 44 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.4112e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.591
+
+[Epoch: 45 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.3334e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.602
+
+[Epoch: 46 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.2859e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.611
+
+[Epoch: 47 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.2371e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.612
+
+[Epoch: 48 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.1597e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.614
+
+[Epoch: 49 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.1130e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.620
+
+[Epoch: 50 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.0610e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.623
+
+[Epoch: 51 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 5.0284e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.622
+
+[Epoch: 52 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.9638e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.632
+
+[Epoch: 53 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.9224e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.635
+
+[Epoch: 54 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.8543e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.624
+
+[Epoch: 55 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.8066e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.644
+
+[Epoch: 56 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.7787e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.645
+
+[Epoch: 57 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.7177e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.651
+
+[Epoch: 58 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.6833e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.655
+
+[Epoch: 59 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.6504e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.649
+
+[Epoch: 60 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.5989e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.653
+
+[Epoch: 61 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.5610e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.658
+
+[Epoch: 62 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.5305e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.667
+
+[Epoch: 63 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.4823e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.669
+
+[Epoch: 64 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.4694e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.671
+
+[Epoch: 65 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.4198e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.671
+
+[Epoch: 66 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.3737e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.669
+
+[Epoch: 67 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.3666e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.668
+
+[Epoch: 68 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.3126e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.665
+
+[Epoch: 69 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.2915e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.674
+
+[Epoch: 70 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.2522e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.671
+
+[Epoch: 71 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.2340e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.683
+
+[Epoch: 72 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.2185e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.688
+
+[Epoch: 73 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.1787e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.681
+
+[Epoch: 74 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.1305e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.691
+
+[Epoch: 75 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.1215e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.684
+
+[Epoch: 76 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.0900e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.687
+
+[Epoch: 77 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.0546e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.692
+
+[Epoch: 78 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.0390e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.692
+
+[Epoch: 79 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 4.0103e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.689
+
+[Epoch: 80 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.9801e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.688
+
+[Epoch: 81 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.9599e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.701
+
+[Epoch: 82 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.9322e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.700
+
+[Epoch: 83 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.9061e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.707
+
+[Epoch: 84 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.8761e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.697
+
+[Epoch: 85 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.8628e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.706
+
+[Epoch: 86 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.8317e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.704
+
+[Epoch: 87 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.8289e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.709
+
+[Epoch: 88 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.7977e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.707
+
+[Epoch: 89 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.7820e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.709
+
+[Epoch: 90 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.7283e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.711
+
+[Epoch: 91 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.7208e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.701
+
+[Epoch: 92 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.7076e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.714
+
+[Epoch: 93 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.6827e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.715
+
+[Epoch: 94 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.6794e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.719
+
+[Epoch: 95 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.6465e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.715
+
+[Epoch: 96 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.6347e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.726
+
+[Epoch: 97 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.6106e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.720
+
+[Epoch: 98 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.6069e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.724
+
+[Epoch: 99 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.5715e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.719
+
+[Epoch: 100 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.5603e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.728
+
+[Epoch: 101 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.5414e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.729
+
+[Epoch: 102 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.5341e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.726
+
+[Epoch: 103 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.5111e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.724
+
+[Epoch: 104 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.4679e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.723
+
+[Epoch: 105 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.4837e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.721
+
+[Epoch: 106 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.4317e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.723
+
+[Epoch: 107 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.4310e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.727
+
+[Epoch: 108 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.4313e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.727
+
+[Epoch: 109 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.4206e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.732
+
+[Epoch: 110 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3791e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.733
+
+[Epoch: 111 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3765e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.736
+
+[Epoch: 112 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3538e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.738
+
+[Epoch: 113 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3478e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.736
+
+[Epoch: 114 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3254e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.725
+
+[Epoch: 115 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3097e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.732
+
+[Epoch: 116 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.3086e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.740
+
+[Epoch: 117 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2599e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.741
+
+[Epoch: 118 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2635e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.741
+
+[Epoch: 119 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2322e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.737
+
+[Epoch: 120 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2442e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.738
+
+[Epoch: 121 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2186e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.742
+
+[Epoch: 122 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2115e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.737
+
+[Epoch: 123 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.2141e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.735
+
+[Epoch: 124 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1805e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.739
+
+[Epoch: 125 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1668e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.741
+
+[Epoch: 126 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1499e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.747
+
+[Epoch: 127 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1411e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.745
+
+[Epoch: 128 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1320e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.741
+
+[Epoch: 129 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1358e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.745
+
+[Epoch: 130 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.1042e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.749
+
+[Epoch: 131 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0858e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.749
+
+[Epoch: 132 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0801e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.748
+
+[Epoch: 133 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0676e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.746
+
+[Epoch: 134 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0504e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.750
+
+[Epoch: 135 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0470e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.742
+
+[Epoch: 136 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0310e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.751
+
+[Epoch: 137 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0134e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.750
+
+[Epoch: 138 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 3.0032e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.753
+
+[Epoch: 139 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9880e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.749
+
+[Epoch: 140 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9942e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.751
+
+[Epoch: 141 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9755e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.750
+
+[Epoch: 142 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9735e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.751
+
+[Epoch: 143 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9434e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.753
+
+[Epoch: 144 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9391e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.756
+
+[Epoch: 145 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9198e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.747
+
+[Epoch: 146 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9251e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.748
+
+[Epoch: 147 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.9123e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.757
+
+[Epoch: 148 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8926e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.759
+
+[Epoch: 149 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8836e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.754
+
+[Epoch: 150 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8788e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.757
+
+[Epoch: 151 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8682e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.761
+
+[Epoch: 152 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8626e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.755
+
+[Epoch: 153 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8540e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.760
+
+[Epoch: 154 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8468e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.757
+
+[Epoch: 155 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8383e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.763
+
+[Epoch: 156 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8172e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.762
+
+[Epoch: 157 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.8057e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.755
+
+[Epoch: 158 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7997e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.762
+
+[Epoch: 159 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7795e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.761
+
+[Epoch: 160 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7749e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.764
+
+[Epoch: 161 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7483e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.763
+
+[Epoch: 162 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7755e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.763
+
+[Epoch: 163 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7721e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.766
+
+[Epoch: 164 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7234e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.763
+
+[Epoch: 165 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7295e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.769
+
+[Epoch: 166 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7187e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.767
+
+[Epoch: 167 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7456e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.768
+
+[Epoch: 168 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.7172e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.762
+
+[Epoch: 169 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6825e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.770
+
+[Epoch: 170 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6809e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.763
+
+[Epoch: 171 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6630e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.770
+
+[Epoch: 172 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6671e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.769
+
+[Epoch: 173 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6582e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.764
+
+[Epoch: 174 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6519e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.769
+
+[Epoch: 175 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6330e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.767
+
+[Epoch: 176 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6484e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.769
+
+[Epoch: 177 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6152e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.772
+
+[Epoch: 178 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6139e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.769
+
+[Epoch: 179 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6121e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.774
+
+[Epoch: 180 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.6064e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.772
+
+[Epoch: 181 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5958e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.764
+
+[Epoch: 182 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5973e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.772
+
+[Epoch: 183 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5733e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.775
+
+[Epoch: 184 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5498e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.774
+
+[Epoch: 185 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5667e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.771
+
+[Epoch: 186 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5498e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.773
+
+[Epoch: 187 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5619e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.772
+
+[Epoch: 188 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5706e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.772
+
+[Epoch: 189 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5335e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.774
+
+[Epoch: 190 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5637e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.780
+
+[Epoch: 191 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5173e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.779
+
+[Epoch: 192 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5070e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.775
+
+[Epoch: 193 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5039e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.777
+
+[Epoch: 194 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4965e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.776
+
+[Epoch: 195 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.5238e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.778
+
+[Epoch: 196 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4770e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.777
+
+[Epoch: 197 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4798e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.778
+
+[Epoch: 198 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4566e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.777
+
+[Epoch: 199 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4573e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.777
+
+[Epoch: 200 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4752e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.780
+
+[Epoch: 201 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4583e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.780
+
+[Epoch: 202 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4391e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.781
+
+[Epoch: 203 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4453e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.778
+
+[Epoch: 204 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4250e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.782
+
+[Epoch: 205 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4312e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.782
+
+[Epoch: 206 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4149e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.773
+
+[Epoch: 207 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4307e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.779
+
+[Epoch: 208 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.4212e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.781
+
+[Epoch: 209 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.3934e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.781
+
+[Epoch: 210 ] : Learning rate : 6.25e-05
+Train :
+	Loss : 2.3739e-06
+
+Test :
+	Loss : 0.000
+	Acc : 0.785
+

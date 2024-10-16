@@ -12,12 +12,12 @@ def init_config(args):
         "h": "huge",
     }
     model = args.model
-    scale = cfg_map[args.model_scale]
+    scale = cfg_map[args.model_size]
     dataset = args.dataset
 
     cfg = importlib.import_module(f"config.{model}_{scale}_{dataset}")
     for key, value in cfg.__dict__.items():
-        if not key.startswith("__"):
+        if not key.startswith("__") and not hasattr(args, key):
             setattr(args, key, value)
 
     return args

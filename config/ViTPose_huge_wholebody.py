@@ -1,7 +1,3 @@
-# _base_ = [
-#     '../../../../_base_/default_runtime.py',
-#     '../../../../_base_/datasets/coco_wholebody.py'
-# ]
 evaluation = dict(interval=10, metric='mAP', save_best='AP')
 
 optimizer = dict(type='AdamW', lr=5e-4, betas=(0.9, 0.999), weight_decay=0.1,
@@ -38,7 +34,7 @@ channel_cfg = dict(
     inference_channel=list(range(133)))
 
 # model settings
-model = dict(
+model_cfg = dict(
     type='TopDown',
     pretrained=None,
     backbone=dict(
@@ -131,28 +127,27 @@ val_pipeline = [
 
 test_pipeline = val_pipeline
 
-data_root = 'data'
+data_root = 'dataset/cocowholebody'
 data = dict(
-    samples_per_gpu=32,
-    workers_per_gpu=4,
-    val_dataloader=dict(samples_per_gpu=16),
-    test_dataloader=dict(samples_per_gpu=16),
+    samples_per_gpu=64,
+    val_dataloader=dict(samples_per_gpu=32),
+    test_dataloader=dict(samples_per_gpu=32),
     train=dict(
-        type='TopDownCocoDataset',
+        type='TopDownCocoWholeBodyDataset',
         ann_file=f'{data_root}/annotations/coco_wholebody_train_v1.0.json',
-        img_prefix=f'{data_root}/images/train2017/',
+        img_prefix=f'{data_root}/train2017/',
         data_cfg=data_cfg,
         pipeline=train_pipeline),
     val=dict(
-        type='TopDownCocoDataset',
+        type='TopDownCocoWholeBodyDataset',
         ann_file=f'{data_root}/annotations/coco_wholebody_val_v1.0.json',
-        img_prefix=f'{data_root}/images/val2017/',
+        img_prefix=f'{data_root}/val2017/',
         data_cfg=data_cfg,
         pipeline=val_pipeline),
     test=dict(
-        type='TopDownCocoDataset',
+        type='TopDownCocoWholeBodyDataset',
         ann_file=f'{data_root}/annotations/coco_wholebody_val_v1.0.json',
-        img_prefix=f'{data_root}/images/val2017/',
+        img_prefix=f'{data_root}/val2017/',
         data_cfg=data_cfg,
-        pipeline=test_pipeline)
+        pipeline=test_pipeline),
 )

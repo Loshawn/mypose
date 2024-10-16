@@ -73,12 +73,12 @@ parser.add_argument('--flip',
 # Model
 parser.add_argument('--model', type=str, default='ViTPose', help='model name')
 
-parser.add_argument('--model_scale',
+parser.add_argument('--model_size',
                     choices=['s', 'b', 'l', 'h'],
                     default='s',
                     help='Select the model scale')
 
-parser.add_argument('--pretrain_path',
+parser.add_argument('--pretrain',
                     type=str,
                     default='.',
                     help='pre trian model path')
@@ -95,6 +95,12 @@ parser.add_argument('--resume',
                     help='file name to resume')
 
 parser.add_argument('--epochs', type=int, default=210, help='number of epochs')
+
+# Inference
+parser.add_argument('--image_path',
+                    type=str,
+                    default='.',
+                    help='image path to inference')
 
 # Log
 

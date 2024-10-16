@@ -1,1 +1,1 @@
-nohup python src/inference.py > inference.out &
+python src/inference.py --image_path test/000000000113.jpg --model_size s --pretrain exp/debug-s/log_2024-10-16-10-15/model/model_210.pth

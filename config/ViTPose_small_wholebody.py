@@ -1,6 +1,6 @@
 evaluation = dict(interval=10, metric='mAP', save_best='AP')
 
-optimizer = dict(type='AdamW', lr=5e-4, betas=(0.9, 0.999), weight_decay=0.1,
+optimizer = dict(type='AdamW', lr=5e-4 * 2, betas=(0.9, 0.999), weight_decay=0.1,
                  constructor='LayerDecayOptimizerConstructor', 
                  paramwise_cfg=dict(
                                     num_layers=12, 
@@ -22,6 +22,8 @@ lr_config = dict(
     warmup_iters=500,
     warmup_ratio=0.001,
     step=[170, 200])
+
+target_type = 'GaussianHeatmap'
 
 channel_cfg = dict(
     num_output_channels=133,
@@ -127,7 +129,7 @@ test_pipeline = val_pipeline
 
 data_root = 'dataset/cocowholebody'
 data = dict(
-    samples_per_gpu=64,
+    samples_per_gpu=128,
     val_dataloader=dict(samples_per_gpu=32),
     test_dataloader=dict(samples_per_gpu=32),
     train=dict(

@@ -2,6 +2,7 @@ import os
 from src.utils.logger import Logger
 from src import models, data
 import torch
+from torch.optim.lr_scheduler import LambdaLR, MultiStepLR
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch import distributed as dist
 from torch.amp import GradScaler, autocast
@@ -14,8 +15,23 @@ class Trainer():
         self.args = args
         self.distributed = args.distributed
 
-        self.loader_train, self.loader_val = data.build_dataloader(datasets)
+        self.loader_train, self.loader_val = data.build_dataloader(
+            args, datasets[0], datasets[1])
         self.optimizer, self.criterion = optimizer, criterion
+
+        milestones = args.lr_config['step']
+        gamma = 0.1
+        self.scheduler = MultiStepLR(optimizer, milestones, gamma)
+
+        self.global_step = 0
+        self.num_warmup_steps = args.lr_config[
+            'warmup_iters']  # Number of warm-up steps
+        warmup_factor = args.lr_config[
+            'warmup_ratio']  # Initial learning rate = warmup_factor * learning_rate
+        self.warmup_scheduler = LambdaLR(
+            optimizer,
+            lr_lambda=lambda step: warmup_factor +
+            (1.0 - warmup_factor) * step / self.num_warmup_steps)
 
         if self.distributed:
             self.rank = dist.get_rank()
@@ -76,12 +92,17 @@ class Trainer():
                 loss.backward()
                 self.optimizer.step()
 
+            if self.global_step < self.num_warmup_steps:
+                self.warmup_scheduler.step()
+            self.global_step += 1
+
             losses += loss.item()
             total_samples += images.size(0)
 
             if self.rank == 0:
                 loop.set_postfix(loss=losses / total_samples)
 
+        self.scheduler.step()
         if self.distributed:
             losses_tensor = torch.tensor(losses).to(self.device)
             total_samples_tensor = torch.tensor(total_samples).to(self.device)
@@ -93,7 +114,7 @@ class Trainer():
             avg_loss = losses / total_samples
 
         self.logger.info['train_loss'].append(avg_loss)
-        self.logger.add_log(f"\tLoss : {avg_loss:.4e}\n")
+        self.logger.add_log(f"\tLoss : {avg_loss:.5e}\n")
 
         self.logger.printf(f"Train Loss : {avg_loss}")
 
@@ -148,8 +169,8 @@ class Trainer():
         self.logger.info['test_loss'].append(avg_loss)
         self.logger.info['acc'].append(acc)
         self.logger.draw_loss()
-        self.logger.add_log(f"\tLoss : {avg_loss:.3f}\n")
-        self.logger.add_log(f"\tAcc : {acc:.3f}\n")
+        self.logger.add_log(f"\tLoss : {avg_loss:.5e}")
+        self.logger.add_log(f"\tAcc : {acc:.5f}\n")
 
         self.logger.printf(f"Test Loss : {avg_loss}")
         self.logger.printf(f"Acc : {acc}")
@@ -169,6 +190,10 @@ class Trainer():
             if self.rank == 0:
                 models.save_model(
                     self.model, f"{self.logger.dir_model}/model_{epoch}.pth")
+                models.save_optimizer_and_logger(
+                    self.optimizer, self.logger.info,
+                    f"{self.logger.dir_model}/optimizer.pth")
+                
             self.logger.info["Epoch"] = epoch
 
         self.logger.printf(

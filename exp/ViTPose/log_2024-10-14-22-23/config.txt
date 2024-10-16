@@ -21,7 +21,7 @@ scale: 0.4
 rotate: 0 
 flip: 0.5 
 model: ViTPose 
-model_scale: s 
+model_size: s 
 pretrain_path: . 
 save: ViTPose 
 resume: . 

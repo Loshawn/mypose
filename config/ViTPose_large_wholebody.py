@@ -1,7 +1,3 @@
-# _base_ = [
-#     '../../../../_base_/default_runtime.py',
-#     '../../../../_base_/datasets/coco_wholebody.py'
-# ]
 evaluation = dict(interval=10, metric='mAP', save_best='AP')
 
 optimizer = dict(type='AdamW', lr=5e-4, betas=(0.9, 0.999), weight_decay=0.1,
@@ -25,7 +21,9 @@ lr_config = dict(
     warmup_iters=500,
     warmup_ratio=0.001,
     step=[170, 200])
+
 total_epochs = 210
+target_type = 'GaussianHeatmap'
 channel_cfg = dict(
     num_output_channels=133,
     dataset_joints=133,
@@ -35,7 +33,7 @@ channel_cfg = dict(
     inference_channel=list(range(133)))
 
 # model settings
-model = dict(
+model_cfg = dict(
     type='TopDown',
     pretrained=None,
     backbone=dict(
@@ -128,7 +126,7 @@ val_pipeline = [
 
 test_pipeline = val_pipeline
 
-data_root = 'data'
+data_root = 'dataset/cocowholebody'
 data = dict(
     samples_per_gpu=64,
     workers_per_gpu=2,
