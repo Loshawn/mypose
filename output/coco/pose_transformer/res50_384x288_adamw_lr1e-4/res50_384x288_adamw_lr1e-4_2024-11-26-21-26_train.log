@@ -1,0 +1,112 @@
+2024-11-26 21:26:12,118 Namespace(cfg='/home/zhhb/Projects/PRTR/two_stage/experiments/coco/transformer/res50_384x288_adamw_lr1e-4.yaml', opts=[], modelDir='', logDir='', dataDir='', prevModelDir='')
+2024-11-26 21:26:12,118 AUTO_RESUME: True
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  COLOR_RGB: False
+  DATASET: coco
+  DATA_FORMAT: jpg
+  FLIP: True
+  HYBRID_JOINTS_TYPE: 
+  NUM_JOINTS_HALF_BODY: 8
+  PROB_HALF_BODY: 0.0
+  ROOT: /home/zhhb/Projects/mypose/data/coco
+  ROT_FACTOR: 40
+  SCALE_FACTOR: 0.3
+  SELECT_DATA: False
+  TEST_SET: val2017
+  TRAIN_SET: train2017
+DATA_DIR: 
+DEBUG:
+  DEBUG: True
+  SAVE_BATCH_IMAGES_GT: True
+  SAVE_BATCH_IMAGES_PRED: True
+  SAVE_HEATMAPS_GT: False
+  SAVE_HEATMAPS_PRED: False
+GPUS: (0,)
+LOG_DIR: log
+LOSS:
+  TOPK: 8
+  USE_DIFFERENT_JOINTS_WEIGHT: False
+  USE_OHKM: False
+  USE_TARGET_WEIGHT: True
+MODEL:
+  EXTRA:
+    AUX_LOSS: True
+    DEC_LAYERS: 6
+    DILATION: False
+    DIM_FEEDFORWARD: 2048
+    DROPOUT: 0.0
+    ENC_LAYERS: 6
+    EOS_COEF: 0.1
+    HIDDEN_DIM: 256
+    KPT_LOSS_COEF: 5.0
+    NHEADS: 8
+    NUM_LAYERS: 50
+    NUM_QUERIES: 100
+    POS_EMBED_METHOD: sine
+    PRE_NORM: False
+  HEATMAP_SIZE: [72, 96]
+  IMAGE_SIZE: [288, 384]
+  INIT_WEIGHTS: True
+  NAME: pose_transformer
+  NUM_JOINTS: 17
+  PRETRAINED: 
+  SIGMA: 2
+  TAG_PER_JOINT: True
+  TARGET_TYPE: coord
+OUTPUT_DIR: output
+PIN_MEMORY: True
+PRINT_FREQ: 50
+RANK: 0
+SAVE_FREQ: 1
+TEST:
+  BATCH_SIZE_PER_GPU: 64
+  BBOX_THRE: 1.0
+  COCO_BBOX_FILE: data/coco/person_detection_results/COCO_val2017_detr_detections.json
+  FLIP_TEST: True
+  IMAGE_THRE: 0.0
+  INCLUDE_BG_LOGIT: False
+  IN_VIS_THRE: 0.2
+  MODEL_FILE: 
+  NMS_THRE: 1.0
+  OKS_THRE: 0.9
+  POST_PROCESS: True
+  SHIFT_HEATMAP: True
+  SOFT_NMS: False
+  USE_GT_BBOX: True
+TRAIN:
+  BATCH_SIZE_PER_GPU: 32
+  BEGIN_EPOCH: 0
+  CHECKPOINT: 
+  CLIP_MAX_NORM: 0.1
+  END_EPOCH: 200
+  GAMMA1: 0.99
+  GAMMA2: 0.0
+  LR: 0.0001
+  LR_BACKBONE: 1e-05
+  LR_FACTOR: 0.5
+  LR_STEP: [120, 140]
+  MOMENTUM: 0.9
+  NESTEROV: False
+  OPTIMIZER: adamW
+  RESUME: False
+  SHUFFLE: True
+  WD: 0.0001
+WORKERS: 8
+2024-11-26 21:26:12,551 => Loading backbone, pretrained: True
+2024-11-26 21:26:18,589 => classes: ['__background__', 'person']
+2024-11-26 21:26:18,591 => num_images: 118287
+2024-11-26 21:26:30,358 => load 149813 samples
+2024-11-26 21:26:30,550 => classes: ['__background__', 'person']
+2024-11-26 21:26:30,550 => num_images: 5000
+2024-11-26 21:26:31,036 => load 6352 samples
+2024-11-26 21:26:46,898 Epoch: [0][0/4682]	Time 15.859s (15.859s)	Speed 2.0 samples/s	Data 4.634s (4.634s)	Metrics: loss_ce_unscaled: 2.89747 (2.89747), loss_ce: 2.89747 (2.89747), class_error_unscaled: 93.93382 (93.93382), loss_kpts_unscaled: 2.07248 (2.07248), loss_kpts: 10.36242 (10.36242), cardinality_error_unscaled: 83.00000 (83.00000), loss_ce_0_unscaled: 3.10550 (3.10550), loss_ce_0: 3.10550 (3.10550), loss_kpts_0_unscaled: 2.05866 (2.05866), loss_kpts_0: 10.29330 (10.29330), cardinality_error_0_unscaled: 83.00000 (83.00000), loss_ce_1_unscaled: 3.00504 (3.00504), loss_ce_1: 3.00504 (3.00504), loss_kpts_1_unscaled: 2.05838 (2.05838), loss_kpts_1: 10.29190 (10.29190), cardinality_error_1_unscaled: 83.00000 (83.00000), loss_ce_2_unscaled: 3.07618 (3.07618), loss_ce_2: 3.07618 (3.07618), loss_kpts_2_unscaled: 2.06082 (2.06082), loss_kpts_2: 10.30408 (10.30408), cardinality_error_2_unscaled: 83.00000 (83.00000), loss_ce_3_unscaled: 2.85431 (2.85431), loss_ce_3: 2.85431 (2.85431), loss_kpts_3_unscaled: 2.04198 (2.04198), loss_kpts_3: 10.20990 (10.20990), cardinality_error_3_unscaled: 71.78125 (71.78125), loss_ce_4_unscaled: 2.87739 (2.87739), loss_ce_4: 2.87739 (2.87739), loss_kpts_4_unscaled: 2.04902 (2.04902), loss_kpts_4: 10.24512 (10.24512), cardinality_error_4_unscaled: 74.53125 (74.53125)
+2024-11-26 21:27:09,008 Epoch: [0][50/4682]	Time 1.996s (0.744s)	Speed 16.0 samples/s	Data 1.864s (0.401s)	Metrics: loss_ce_unscaled: 2.54187 (2.55622), loss_ce: 2.54187 (2.55622), class_error_unscaled: 100.00000 (99.88106), loss_kpts_unscaled: 1.57287 (1.86146), loss_kpts: 7.86435 (9.30730), cardinality_error_unscaled: 17.00000 (18.29412), loss_ce_0_unscaled: 2.53887 (2.55687), loss_ce_0: 2.53887 (2.55687), loss_kpts_0_unscaled: 1.57349 (1.86129), loss_kpts_0: 7.86743 (9.30645), cardinality_error_0_unscaled: 17.00000 (18.29412), loss_ce_1_unscaled: 2.53934 (2.55569), loss_ce_1: 2.53934 (2.55569), loss_kpts_1_unscaled: 1.57481 (1.86051), loss_kpts_1: 7.87403 (9.30253), cardinality_error_1_unscaled: 17.00000 (18.29412), loss_ce_2_unscaled: 2.53853 (2.55612), loss_ce_2: 2.53853 (2.55612), loss_kpts_2_unscaled: 1.57236 (1.86033), loss_kpts_2: 7.86181 (9.30164), cardinality_error_2_unscaled: 17.00000 (18.29412), loss_ce_3_unscaled: 2.53891 (2.55461), loss_ce_3: 2.53891 (2.55461), loss_kpts_3_unscaled: 1.56999 (1.86026), loss_kpts_3: 7.84996 (9.30129), cardinality_error_3_unscaled: 17.00000 (18.07414), loss_ce_4_unscaled: 2.53905 (2.55405), loss_ce_4: 2.53905 (2.55405), loss_kpts_4_unscaled: 1.57126 (1.86104), loss_kpts_4: 7.85631 (9.30519), cardinality_error_4_unscaled: 17.00000 (18.12806)
+2024-11-26 21:27:33,391 Epoch: [0][100/4682]	Time 0.133s (0.617s)	Speed 240.5 samples/s	Data 0.000s (0.381s)	Metrics: loss_ce_unscaled: 2.41163 (2.52592), loss_ce: 2.41163 (2.52592), class_error_unscaled: 97.79412 (99.28655), loss_kpts_unscaled: 0.54637 (1.62841), loss_kpts: 2.73187 (8.14204), cardinality_error_unscaled: 12.09375 (16.43502), loss_ce_0_unscaled: 2.48991 (2.52515), loss_ce_0: 2.48991 (2.52515), loss_kpts_0_unscaled: 0.55392 (1.61174), loss_kpts_0: 2.76962 (8.05868), cardinality_error_0_unscaled: 6.56250 (15.37748), loss_ce_1_unscaled: 2.44768 (2.52559), loss_ce_1: 2.44768 (2.52559), loss_kpts_1_unscaled: 0.55352 (1.61327), loss_kpts_1: 2.76762 (8.06636), cardinality_error_1_unscaled: 14.93750 (15.72927), loss_ce_2_unscaled: 2.41565 (2.52209), loss_ce_2: 2.41565 (2.52209), loss_kpts_2_unscaled: 0.54047 (1.61552), loss_kpts_2: 2.70235 (8.07760), cardinality_error_2_unscaled: 14.90625 (16.02011), loss_ce_3_unscaled: 2.40772 (2.51716), loss_ce_3: 2.40772 (2.51716), loss_kpts_3_unscaled: 0.55569 (1.62134), loss_kpts_3: 2.77845 (8.10669), cardinality_error_3_unscaled: 15.34375 (15.86231), loss_ce_4_unscaled: 2.41860 (2.52359), loss_ce_4: 2.41860 (2.52359), loss_kpts_4_unscaled: 0.55183 (1.61763), loss_kpts_4: 2.75915 (8.08815), cardinality_error_4_unscaled: 16.34375 (16.95668)
+2024-11-26 21:28:00,626 Epoch: [0][150/4682]	Time 0.115s (0.593s)	Speed 277.2 samples/s	Data 0.000s (0.395s)	Metrics: loss_ce_unscaled: 2.24516 (2.47290), loss_ce: 2.24516 (2.47290), class_error_unscaled: 89.70589 (97.92316), loss_kpts_unscaled: 0.34417 (1.21153), loss_kpts: 1.72083 (6.05767), cardinality_error_unscaled: 10.68750 (15.03642), loss_ce_0_unscaled: 2.31445 (2.47986), loss_ce_0: 2.31445 (2.47986), loss_kpts_0_unscaled: 0.34427 (1.19609), loss_kpts_0: 1.72136 (5.98044), cardinality_error_0_unscaled: 15.34375 (15.62603), loss_ce_1_unscaled: 2.28704 (2.47081), loss_ce_1: 2.28704 (2.47081), loss_kpts_1_unscaled: 0.35590 (1.19568), loss_kpts_1: 1.77951 (5.97840), cardinality_error_1_unscaled: 10.84375 (15.64673), loss_ce_2_unscaled: 2.23545 (2.45918), loss_ce_2: 2.23545 (2.45918), loss_kpts_2_unscaled: 0.34816 (1.19769), loss_kpts_2: 1.74079 (5.98847), cardinality_error_2_unscaled: 8.93750 (14.89859), loss_ce_3_unscaled: 2.22851 (2.45368), loss_ce_3: 2.22851 (2.45368), loss_kpts_3_unscaled: 0.34577 (1.20275), loss_kpts_3: 1.72887 (6.01373), cardinality_error_3_unscaled: 9.75000 (14.38742), loss_ce_4_unscaled: 2.24903 (2.46433), loss_ce_4: 2.24903 (2.46433), loss_kpts_4_unscaled: 0.33959 (1.20268), loss_kpts_4: 1.69797 (6.01342), cardinality_error_4_unscaled: 8.96875 (15.31312)
+2024-11-26 21:28:23,268 Epoch: [0][200/4682]	Time 0.138s (0.558s)	Speed 232.6 samples/s	Data 0.000s (0.377s)	Metrics: loss_ce_unscaled: 2.18428 (2.41035), loss_ce: 2.18428 (2.41035), class_error_unscaled: 90.25735 (95.55623), loss_kpts_unscaled: 0.36457 (0.99412), loss_kpts: 1.82285 (4.97060), cardinality_error_unscaled: 10.71875 (13.48352), loss_ce_0_unscaled: 2.19012 (2.42691), loss_ce_0: 2.19012 (2.42691), loss_kpts_0_unscaled: 0.34131 (0.98036), loss_kpts_0: 1.70654 (4.90180), cardinality_error_0_unscaled: 10.84375 (14.78591), loss_ce_1_unscaled: 2.12002 (2.40463), loss_ce_1: 2.12002 (2.40463), loss_kpts_1_unscaled: 0.35269 (0.98081), loss_kpts_1: 1.76344 (4.90404), cardinality_error_1_unscaled: 6.37500 (13.90096), loss_ce_2_unscaled: 2.10771 (2.38853), loss_ce_2: 2.10771 (2.38853), loss_kpts_2_unscaled: 0.34967 (0.98204), loss_kpts_2: 1.74835 (4.91021), cardinality_error_2_unscaled: 5.62500 (12.88277), loss_ce_3_unscaled: 2.13422 (2.38076), loss_ce_3: 2.13422 (2.38076), loss_kpts_3_unscaled: 0.34933 (0.98659), loss_kpts_3: 1.74663 (4.93297), cardinality_error_3_unscaled: 7.81250 (12.65843), loss_ce_4_unscaled: 2.18114 (2.40375), loss_ce_4: 2.18114 (2.40375), loss_kpts_4_unscaled: 0.36769 (0.98631), loss_kpts_4: 1.83844 (4.93154), cardinality_error_4_unscaled: 9.84375 (13.32400)
+2024-11-26 21:28:46,259 Epoch: [0][250/4682]	Time 0.115s (0.539s)	Speed 278.4 samples/s	Data 0.000s (0.368s)	Metrics: loss_ce_unscaled: 2.00446 (2.34096), loss_ce: 2.00446 (2.34096), class_error_unscaled: 78.30882 (92.95685), loss_kpts_unscaled: 0.32185 (0.86244), loss_kpts: 1.60924 (4.31220), cardinality_error_unscaled: 3.00000 (12.17542), loss_ce_0_unscaled: 2.14780 (2.37927), loss_ce_0: 2.14780 (2.37927), loss_kpts_0_unscaled: 0.29437 (0.84894), loss_kpts_0: 1.47186 (4.24468), cardinality_error_0_unscaled: 8.34375 (13.59985), loss_ce_1_unscaled: 2.03087 (2.33932), loss_ce_1: 2.03087 (2.33932), loss_kpts_1_unscaled: 0.28787 (0.84852), loss_kpts_1: 1.43934 (4.24260), cardinality_error_1_unscaled: 3.21875 (11.78250), loss_ce_2_unscaled: 1.92293 (2.31940), loss_ce_2: 1.92293 (2.31940), loss_kpts_2_unscaled: 0.30551 (0.84953), loss_kpts_2: 1.52757 (4.24766), cardinality_error_2_unscaled: 1.93750 (11.10334), loss_ce_3_unscaled: 1.98354 (2.31763), loss_ce_3: 1.98354 (2.31763), loss_kpts_3_unscaled: 0.32243 (0.85453), loss_kpts_3: 1.61217 (4.27263), cardinality_error_3_unscaled: 3.50000 (11.03399), loss_ce_4_unscaled: 2.00123 (2.33909), loss_ce_4: 2.00123 (2.33909), loss_kpts_4_unscaled: 0.30522 (0.85357), loss_kpts_4: 1.52611 (4.26784), cardinality_error_4_unscaled: 5.59375 (12.11417)
+2024-11-26 21:29:07,981 Epoch: [0][300/4682]	Time 0.115s (0.521s)	Speed 279.3 samples/s	Data 0.000s (0.356s)	Metrics: loss_ce_unscaled: 1.97326 (2.28161), loss_ce: 1.97326 (2.28161), class_error_unscaled: 79.77941 (90.42835), loss_kpts_unscaled: 0.37186 (0.77529), loss_kpts: 1.85931 (3.87643), cardinality_error_unscaled: 6.03125 (10.96574), loss_ce_0_unscaled: 2.08991 (2.34062), loss_ce_0: 2.08991 (2.34062), loss_kpts_0_unscaled: 0.34041 (0.76058), loss_kpts_0: 1.70205 (3.80288), cardinality_error_0_unscaled: 6.62500 (12.32506), loss_ce_1_unscaled: 2.04129 (2.28667), loss_ce_1: 2.04129 (2.28667), loss_kpts_1_unscaled: 0.36702 (0.76163), loss_kpts_1: 1.83509 (3.80815), cardinality_error_1_unscaled: 2.15625 (10.20691), loss_ce_2_unscaled: 1.94470 (2.26121), loss_ce_2: 1.94470 (2.26121), loss_kpts_2_unscaled: 0.39195 (0.76318), loss_kpts_2: 1.95976 (3.81588), cardinality_error_2_unscaled: 3.56250 (9.84250), loss_ce_3_unscaled: 1.93602 (2.26336), loss_ce_3: 1.93602 (2.26336), loss_kpts_3_unscaled: 0.36370 (0.76744), loss_kpts_3: 1.81850 (3.83718), cardinality_error_3_unscaled: 3.37500 (9.65947), loss_ce_4_unscaled: 1.97868 (2.27929), loss_ce_4: 1.97868 (2.27929), loss_kpts_4_unscaled: 0.36016 (0.76639), loss_kpts_4: 1.80080 (3.83197), cardinality_error_4_unscaled: 5.06250 (11.05181)

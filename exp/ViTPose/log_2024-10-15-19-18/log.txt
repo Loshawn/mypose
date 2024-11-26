@@ -1,5 +1,0 @@
-[Epoch: 1 ] : Learning rate : 6.25e-05
-Train :
-	Loss : 7.1227e-05
-
-Test :
