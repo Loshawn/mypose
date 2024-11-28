@@ -12,7 +12,7 @@ DATASET:
   HYBRID_JOINTS_TYPE: 
   NUM_JOINTS_HALF_BODY: 8
   PROB_HALF_BODY: 0.0
-  ROOT: /home/zhhb/Projects/mypose/data/coco
+  ROOT: /home/zhhb/Projects/mmpose/data/coco
   ROT_FACTOR: 40
   SCALE_FACTOR: 0.3
   SELECT_DATA: False
@@ -103,20 +103,20 @@ WORKERS: 8
 2024-11-26 21:25:30,659 => classes: ['__background__', 'person']
 2024-11-26 21:25:30,659 => num_images: 5000
 2024-11-26 21:25:31,630 => load 6352 samples
-2024-11-26 21:25:32,053 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000305105.jpg
-2024-11-26 21:25:32,055 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000077136.jpg
-2024-11-26 21:25:32,056 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000058929.jpg
-2024-11-26 21:25:32,376 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000096640.jpg
-2024-11-26 21:25:32,378 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000297956.jpg
-2024-11-26 21:25:32,885 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000136042.jpg
-2024-11-26 21:25:32,896 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000190950.jpg
-2024-11-26 21:25:33,264 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000052700.jpg
-2024-11-26 21:25:33,267 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000096785.jpg
-2024-11-26 21:25:33,604 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000308774.jpg
-2024-11-26 21:25:33,606 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000268133.jpg
-2024-11-26 21:25:33,947 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000254632.jpg
-2024-11-26 21:25:33,950 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000506335.jpg
-2024-11-26 21:25:34,292 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000533512.jpg
-2024-11-26 21:25:34,294 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000253725.jpg
-2024-11-26 21:25:34,620 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000166069.jpg
-2024-11-26 21:25:34,622 => fail to read /home/zhhb/Projects/mypose/data/coco/images/train2017/000000364079.jpg
+2024-11-26 21:25:32,053 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000305105.jpg
+2024-11-26 21:25:32,055 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000077136.jpg
+2024-11-26 21:25:32,056 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000058929.jpg
+2024-11-26 21:25:32,376 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000096640.jpg
+2024-11-26 21:25:32,378 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000297956.jpg
+2024-11-26 21:25:32,885 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000136042.jpg
+2024-11-26 21:25:32,896 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000190950.jpg
+2024-11-26 21:25:33,264 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000052700.jpg
+2024-11-26 21:25:33,267 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000096785.jpg
+2024-11-26 21:25:33,604 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000308774.jpg
+2024-11-26 21:25:33,606 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000268133.jpg
+2024-11-26 21:25:33,947 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000254632.jpg
+2024-11-26 21:25:33,950 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000506335.jpg
+2024-11-26 21:25:34,292 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000533512.jpg
+2024-11-26 21:25:34,294 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000253725.jpg
+2024-11-26 21:25:34,620 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000166069.jpg
+2024-11-26 21:25:34,622 => fail to read /home/zhhb/Projects/mmpose/data/coco/images/train2017/000000364079.jpg
