@@ -19,7 +19,7 @@ DATASET:
   FLIP: true
   ROT_FACTOR: 40
   SCALE_FACTOR: 0.3
-  INTERVAL: 1000
+  INTERVAL: 1
 MODEL:
   INIT_WEIGHTS: true
   NAME: 'pose_transformer'
