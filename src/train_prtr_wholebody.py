@@ -46,7 +46,7 @@ def parse_args():
     # general
     parser.add_argument('--cfg',
                         help='experiment configure file name',
-                        default="/home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr1e-4.yaml", 
+                        default="/home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr5e-5_bs64.yaml", 
                         type=str)
 
     parser.add_argument('opts',

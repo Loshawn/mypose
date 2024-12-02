@@ -221,18 +221,12 @@ class WholebodyDataset(JointsDataset):
                 continue
 
             # !!!
-            joints_3d = np.zeros((self.num_joints, 3), dtype=np.float_)
-            joints_3d_vis = np.zeros((self.num_joints, 3), dtype=np.float_)
-            for ipt in range(self.num_joints):
-                joints_3d[ipt, 0] = obj["wholebody"][ipt * 3 + 0]
-                joints_3d[ipt, 1] = obj["wholebody"][ipt * 3 + 1]
-                joints_3d[ipt, 2] = 0
-                t_vis = obj["wholebody"][ipt * 3 + 2]
-                if t_vis > 1:
-                    t_vis = 1
-                joints_3d_vis[ipt, 0] = t_vis
-                joints_3d_vis[ipt, 1] = t_vis
-                joints_3d_vis[ipt, 2] = 0
+            wholebody = np.array(obj["wholebody"]).reshape(self.num_joints, 3)
+            joints_3d = wholebody[:, :2]
+            joints_3d_vis = np.minimum(1, wholebody[..., 2] > 0)
+            
+            joints_3d_vis = np.column_stack((joints_3d_vis, joints_3d_vis, np.zeros(self.num_joints)))
+            joints_3d = np.column_stack((joints_3d, np.zeros(self.num_joints)))
 
             center, scale = self._box2cs(obj["clean_bbox"][:4])
             rec.append({
@@ -308,8 +302,8 @@ class WholebodyDataset(JointsDataset):
             num_boxes = num_boxes + 1
 
             center, scale = self._box2cs(box)
-            joints_3d = np.zeros((self.num_joints, 3), dtype=np.float_)
-            joints_3d_vis = np.ones((self.num_joints, 3), dtype=np.float_)
+            joints_3d = np.zeros((self.num_joints, 3), dtype=np.float32)
+            joints_3d_vis = np.ones((self.num_joints, 3), dtype=np.float32)
             kpt_db.append({
                 "image": img_name,
                 "center": center,
