@@ -172,7 +172,7 @@ class JointsDataset(Dataset):
             trans,
             (int(self.image_size[0]), int(self.image_size[1])),
             flags=cv2.INTER_LINEAR)
-
+        input0 = input.copy()
         if self.transform:
             input = self.transform(input)
 
@@ -196,7 +196,7 @@ class JointsDataset(Dataset):
             'rotation': r,
             'score': score
         }
-
+        
         return input, target, target_weight, meta
 
     def select_data(self, db):

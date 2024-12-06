@@ -13,11 +13,12 @@ from collections import OrderedDict
 import logging
 import os
 
-from pycocotools.coco import COCO
-from pycocotools.cocoeval import COCOeval
+
 import json_tricks as json
 import numpy as np
 
+from xtcocotools.coco import COCO
+from xtcocotools.cocoeval import COCOeval
 
 from .eval.wholebody_eval import WholebodyEval
 
@@ -106,10 +107,13 @@ class WholebodyDataset(JointsDataset):
                           [108, 129], [109, 130], [110, 131], [111, 132]]
 
         self.flip_pairs = self.flip_body + self.flip_foot + self.flip_face + self.flip_hand
-
+        
         self.parent_ids = None
-        self.upper_body_ids = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  #!!!
-        self.lower_body_ids = (11, 12, 13, 14, 15, 16)  #!!!
+
+        all_points = list(range(133))
+        self.lower_body_ids = (11, 12, 13, 14, 15, 16, 17, 18, 19,20,21, 22)
+
+        self.upper_body_ids = sorted(list(set(all_points) - set(self.lower_body_ids)))
 
         self.joints_weight = np.concatenate((
             np.full(7, 1),  # 1~7
@@ -124,7 +128,7 @@ class WholebodyDataset(JointsDataset):
         )).astype(np.float32).reshape((self.num_joints, 1))
 
         self.db = self._get_db()
-        self.sigmas = [
+        self.sigmas = np.array([
             0.026, 0.025, 0.025, 0.035, 0.035, 0.079, 0.079, 0.072, 0.072,
             0.062, 0.062, 0.107, 0.107, 0.087, 0.087, 0.089, 0.089, 0.068,
             0.066, 0.066, 0.092, 0.094, 0.094, 0.042, 0.043, 0.044, 0.043,
@@ -140,7 +144,7 @@ class WholebodyDataset(JointsDataset):
             0.02, 0.019, 0.022, 0.031, 0.029, 0.022, 0.035, 0.037, 0.047,
             0.026, 0.025, 0.024, 0.035, 0.018, 0.024, 0.022, 0.026, 0.017,
             0.021, 0.021, 0.032, 0.02, 0.019, 0.022, 0.031
-        ]
+        ])
         if is_train and cfg.DATASET.SELECT_DATA:
             self.db = self.select_data(self.db)
 
@@ -202,17 +206,19 @@ class WholebodyDataset(JointsDataset):
             y1 = np.max((0, y))
             x2 = np.min((width - 1, x1 + np.max((0, w - 1))))
             y2 = np.min((height - 1, y1 + np.max((0, h - 1))))
+
+
+            obj["wholebody"] = obj["keypoints"] + obj["foot_kpts"] + obj[
+                "face_kpts"] + obj["lefthand_kpts"] + obj["righthand_kpts"]
+
             if obj["area"] > 0 and x2 >= x1 and y2 >= y1:
                 obj["clean_bbox"] = [x1, y1, x2 - x1, y2 - y1]
                 valid_objs.append(obj)
         objs = valid_objs
 
-
         rec = []
         for obj in objs:
             cls = self._coco_ind_to_class_ind[obj["category_id"]]
-            obj["wholebody"] = obj["keypoints"] + obj["foot_kpts"] + obj[
-                "face_kpts"] + obj["lefthand_kpts"] + obj["righthand_kpts"]
             if cls != 1:
                 continue
 
@@ -224,8 +230,9 @@ class WholebodyDataset(JointsDataset):
             wholebody = np.array(obj["wholebody"]).reshape(self.num_joints, 3)
             joints_3d = wholebody[:, :2]
             joints_3d_vis = np.minimum(1, wholebody[..., 2] > 0)
-            
-            joints_3d_vis = np.column_stack((joints_3d_vis, joints_3d_vis, np.zeros(self.num_joints)))
+
+            joints_3d_vis = np.column_stack(
+                (joints_3d_vis, joints_3d_vis, np.zeros(self.num_joints)))
             joints_3d = np.column_stack((joints_3d, np.zeros(self.num_joints)))
 
             center, scale = self._box2cs(obj["clean_bbox"][:4])
@@ -455,7 +462,7 @@ class WholebodyDataset(JointsDataset):
                     key_points[k, 91 * 3:112 * 3].tolist(),  # 21 points
                     "righthand_kpts":
                     key_points[k, 112 * 3:133 * 3].tolist(),  # 21 points
-                    "wholebody": key_points[k].tolist(),
+                    "keypoints_wholebody": key_points[k].tolist(),
                     "score": img_kpts[k]["score"],
                     "center": list(img_kpts[k]["center"]),
                     "scale": list(img_kpts[k]["scale"]),
@@ -465,45 +472,48 @@ class WholebodyDataset(JointsDataset):
 
         return cat_results
 
-    def _do_python_keypoint_eval(self, res_file, res_folder):
+    def _do_python_keypoint_eval(self, res_file, res_folder=None):
         coco_dt = self.coco.loadRes(res_file)
 
-        coco_eval = WholebodyEval(self.coco, coco_dt, "keypoints", position="keypoints")
+        coco_eval = COCOeval(self.coco, coco_dt, 'keypoints', self.sigmas[:17])
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
 
-        coco_eval = WholebodyEval(self.coco, coco_dt, "keypoints", position="foot")
+        coco_eval = COCOeval(self.coco, coco_dt, 'keypoints_foot',
+                             self.sigmas[17:23])
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
 
-        coco_eval = WholebodyEval(self.coco, coco_dt, "keypoints", position="face")
+        coco_eval = COCOeval(self.coco, coco_dt, 'keypoints_face',
+                             self.sigmas[23:91])
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
 
-        coco_eval = WholebodyEval(self.coco, coco_dt, "keypoints", position="lefthand")
+        coco_eval = COCOeval(self.coco, coco_dt, 'keypoints_lefthand',
+                             self.sigmas[91:112])
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
 
-        coco_eval = WholebodyEval(self.coco, coco_dt, "keypoints", position="righthand")
+        coco_eval = COCOeval(self.coco, coco_dt, 'keypoints_righthand',
+                             self.sigmas[112:133])
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
 
-        coco_eval = WholebodyEval(self.coco, coco_dt, "keypoints", position="wholebody")
+        coco_eval = COCOeval(self.coco, coco_dt, 'keypoints_wholebody', self.sigmas)
         coco_eval.params.useSegm = None
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
-
 
         stats_names = [
             "AP",
@@ -523,4 +533,3 @@ class WholebodyDataset(JointsDataset):
             info_str.append((name, coco_eval.stats[ind]))
 
         return info_str
-        

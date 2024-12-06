@@ -194,10 +194,9 @@ def main():
         lr_scheduler.step()
 
         # evaluate on validation set
-        if epoch % cfg.TRAIN.EVAL_PER_EPOCH == 0:
-            perf_indicator = validate(
-                cfg, valid_loader, valid_dataset, model, criterion,
-                final_output_dir, tb_log_dir, writer_dict)
+        perf_indicator = validate(
+            cfg, valid_loader, valid_dataset, model, criterion,
+            final_output_dir, tb_log_dir, writer_dict)
 
         if perf_indicator > best_perf:
             best_perf = perf_indicator
