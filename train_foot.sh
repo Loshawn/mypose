@@ -1,1 +1,1 @@
-nohup src/train_prtr_foot.py --cfg /home/zhhb/Projects/mypose/src/config/foot/res50_384x288_adamw.yaml > "output/foot/pose_transformer/res50_384x288_adamw/12.8.out" &
+nohup python /home/zhhb/Projects/mypose/src/train_prtr_foot.py --cfg /home/zhhb/Projects/mypose/src/config/foot/res50_384x288_adamw.yaml > "output/foot/pose_transformer/res50_384x288_adamw/12.8.out" &

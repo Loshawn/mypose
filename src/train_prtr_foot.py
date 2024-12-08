@@ -30,6 +30,7 @@ sys.path.append(os.path.abspath(os.path.dirname(this_dir)))
 
 from src.config import cfg
 from src.config import update_config
+from core.loss import JointsMSELoss
 from core.function import train
 from core.function import validate
 from models.matcher import build_matcher
