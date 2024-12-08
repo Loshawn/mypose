@@ -265,7 +265,7 @@ class FOOTDataset(JointsDataset):
         _kpts = []
         for idx, kpt in enumerate(preds):
             _kpts.append({
-                "foot_kpts": kpt,
+                "keypoints": kpt,
                 "center": all_boxes[idx][0:2],
                 "scale": all_boxes[idx][2:4],
                 "area": all_boxes[idx][4],
@@ -289,7 +289,7 @@ class FOOTDataset(JointsDataset):
                 kpt_score = 0
                 valid_num = 0
                 for n_jt in range(0, num_joints):
-                    t_s = n_p["foot_kpts"][n_jt][2]
+                    t_s = n_p["keypoints"][n_jt][2]
                     if t_s > in_vis_thre:
                         kpt_score = kpt_score + t_s
                         valid_num = valid_num + 1
@@ -326,8 +326,8 @@ class FOOTDataset(JointsDataset):
             "cat_id": self._class_to_coco_ind[cls],
             "cls_ind": cls_ind,
             "cls": cls,
-            "ann_type": "foot_kpts",
-            "foot_kpts": keypoints,
+            "ann_type": "keypoints",
+            "keypoints": keypoints,
         } for cls_ind, cls in enumerate(self.classes)
                      if not cls == "__background__"]
 
@@ -349,7 +349,7 @@ class FOOTDataset(JointsDataset):
 
     def _coco_keypoint_results_one_category_kernel(self, data_pack):
         cat_id = data_pack["cat_id"]
-        keypoints = data_pack["foot_kpts"]
+        keypoints = data_pack["keypoints"]
         cat_results = []
 
         for img_kpts in keypoints:
@@ -357,7 +357,7 @@ class FOOTDataset(JointsDataset):
                 continue
 
             _key_points = np.array(
-                [img_kpts[k]["foot_kpts"] for k in range(len(img_kpts))])
+                [img_kpts[k]["keypoints"] for k in range(len(img_kpts))])
             key_points = np.zeros((_key_points.shape[0], self.num_joints * 3),
                                   dtype=np.float32)
 
