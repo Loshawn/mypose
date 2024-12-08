@@ -1,1 +1,1 @@
-nohup python src/train_prtr_wholebody.py --cfg /home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr5e-5_bs64.yaml > "output/wholebody/pose_transformer/res50_384x288_adamw_lr5e-5_bs64/12.2-lr-5e-5-bs64.out" &
+nohup python src/train_prtr_wholebody.py --cfg /home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr5e-5_bs64.yaml > "output/wholebody/pose_transformer/res50_384x288_adamw_lr5e-5_bs64/12.6-lr-5e-5-bs64.out" &

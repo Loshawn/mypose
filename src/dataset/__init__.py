@@ -11,4 +11,4 @@ from __future__ import print_function
 from .mpii import MPIIDataset as mpii
 from .coco import COCODataset as coco
 from .wholebody import WholebodyDataset as wholebody
-
+from .foot import FOOTDataset as foot

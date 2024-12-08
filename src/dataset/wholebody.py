@@ -122,7 +122,8 @@ class WholebodyDataset(JointsDataset):
             np.full(2, 1),  # 12~13
             np.full(2, 1.2),  # 14~15
             np.full(2, 1.5),  # 16~17
-            np.full(6, 1.5),  # 18~23
+
+            np.full(6, 4.5),  # 18~23
             np.full(68, 1),  # 24~91
             np.full(42, 1.5)  # 92~133
         )).astype(np.float32).reshape((self.num_joints, 1))
