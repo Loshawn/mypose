@@ -46,7 +46,7 @@ def parse_args():
     # general
     parser.add_argument('--cfg',
                         help='experiment configure file name',
-                        default="/home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr5e-5_bs64.yaml", 
+                        default="/home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw.yaml", 
                         type=str)
 
     parser.add_argument('opts',
@@ -155,6 +155,9 @@ def main():
         num_workers=cfg.WORKERS,
         pin_memory=cfg.PIN_MEMORY
     )
+
+    validate(cfg, train_loader, train_dataset, model, criterion,
+             final_output_dir, tb_log_dir)
 
     best_perf = 0.0
     best_model = False

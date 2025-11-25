@@ -37,7 +37,7 @@ def parse_args():
     # general
     parser.add_argument('--cfg',
                         help='experiment configure file name',
-                        default="/home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr1e-4.yaml", 
+                        default="/home/zhhb/Projects/mypose/src/config/wholebody/res50_384x288_adamw_lr5e-5_bs64.yaml", 
                         type=str)
 
     parser.add_argument('opts',
@@ -109,8 +109,15 @@ def main():
     normalize = transforms.Normalize(
         mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]
     )
+    # valid_dataset = eval('dataset.'+cfg.DATASET.DATASET)(
+    #     cfg, cfg.DATASET.ROOT, cfg.DATASET.TEST_SET, False,
+    #     transforms.Compose([
+    #         transforms.ToTensor(),
+    #         normalize,
+    #     ])
+    # )
     valid_dataset = eval('dataset.'+cfg.DATASET.DATASET)(
-        cfg, cfg.DATASET.ROOT, cfg.DATASET.TEST_SET, False,
+        cfg, cfg.DATASET.ROOT, cfg.DATASET.TRAIN_SET, True,
         transforms.Compose([
             transforms.ToTensor(),
             normalize,
@@ -131,7 +138,7 @@ def main():
 
     # only eval
 
-    # valid_dataset._do_python_keypoint_eval("output/wholebody/pose_transformer/res50_384x288_adamw_lr1e-4/results/keypoints_val2017_results_0.json")
+    #valid_dataset._do_python_keypoint_eval("output/wholebody/pose_transformer/res50_384x288_adamw_lr5e-5_bs64/results/keypoints_val2017_results_0.json")
 
 
 if __name__ == '__main__':

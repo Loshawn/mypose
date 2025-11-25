@@ -13,10 +13,11 @@ from collections import OrderedDict
 import logging
 import os
 
-from xtcocotools.coco import COCO
-from xtcocotools.cocoeval import COCOeval
 import json_tricks as json
 import numpy as np
+
+from xtcocotools.coco import COCO
+from xtcocotools.cocoeval import COCOeval
 
 from dataset.JointsDataset import JointsDataset
 from nms.nms import oks_nms
@@ -144,18 +145,14 @@ class FOOTDataset(JointsDataset):
             if max(obj["foot_kpts"]) == 0:
                 continue
 
-            joints_3d = np.zeros((self.num_joints, 3), dtype=np.float32)
-            joints_3d_vis = np.zeros((self.num_joints, 3), dtype=np.float32)
-            for ipt in range(self.num_joints):
-                joints_3d[ipt, 0] = obj["foot_kpts"][ipt * 3 + 0]
-                joints_3d[ipt, 1] = obj["foot_kpts"][ipt * 3 + 1]
-                joints_3d[ipt, 2] = 0
-                t_vis = obj["foot_kpts"][ipt * 3 + 2]
-                if t_vis > 1:
-                    t_vis = 1
-                joints_3d_vis[ipt, 0] = t_vis
-                joints_3d_vis[ipt, 1] = t_vis
-                joints_3d_vis[ipt, 2] = 0
+            # !!!
+            foot_kpts = np.array(obj["foot_kpts"]).reshape(self.num_joints, 3)
+            joints_3d = foot_kpts[:, :2]
+            joints_3d_vis = np.minimum(1, foot_kpts[..., 2] > 0)
+
+            joints_3d_vis = np.column_stack(
+                (joints_3d_vis, joints_3d_vis, np.zeros(self.num_joints)))
+            joints_3d = np.column_stack((joints_3d, np.zeros(self.num_joints)))
 
             center, scale = self._box2cs(obj["clean_bbox"][:4])
             rec.append({
@@ -327,14 +324,15 @@ class FOOTDataset(JointsDataset):
             "cls_ind": cls_ind,
             "cls": cls,
             "ann_type": "keypoints",
-            "keypoints": keypoints,
+            "keypoints": keypoints
         } for cls_ind, cls in enumerate(self.classes)
                      if not cls == "__background__"]
 
         results = self._coco_keypoint_results_one_category_kernel(data_pack[0])
-        logger.info("=> writing results json to %s" % res_file)
         with open(res_file, "w") as f:
             json.dump(results, f, sort_keys=True, indent=4)
+        logger.info("=> writing results json to %s" % res_file)
+
         try:
             json.load(open(res_file))
         except Exception:
@@ -361,20 +359,26 @@ class FOOTDataset(JointsDataset):
             key_points = np.zeros((_key_points.shape[0], self.num_joints * 3),
                                   dtype=np.float32)
 
-            for ipt in range(self.num_joints):
-                key_points[:, ipt * 3 + 0] = _key_points[:, ipt, 0]
-                key_points[:, ipt * 3 + 1] = _key_points[:, ipt, 1]
-                key_points[:, ipt * 3 + 2] = _key_points[:, ipt,
-                                                         2]  # keypoints score.
+            # for ipt in range(self.num_joints):
+            #     key_points[:, ipt * 3 + 0] = _key_points[:, ipt, 0]
+            #     key_points[:, ipt * 3 + 1] = _key_points[:, ipt, 1]
+            #     key_points[:, ipt * 3 + 2] = _key_points[:, ipt, 2]
 
-            result = [{
-                "image_id": img_kpts[k]["image"],
-                "category_id": cat_id,
-                "foot_kpts": list(key_points[k]),
-                "score": img_kpts[k]["score"],
-                "center": list(img_kpts[k]["center"]),
-                "scale": list(img_kpts[k]["scale"]),
-            } for k in range(len(img_kpts))]
+            key_points[:, ::3] = _key_points[:, :, 0]
+            key_points[:, 1::3] = _key_points[:, :, 1]
+            key_points[:, 2::3] = _key_points[:, :, 2]
+
+            result = [
+                {
+                    "image_id": img_kpts[k]["image"],
+                    "category_id": cat_id,
+                    "keypoints":key_points[k].tolist(),
+                    "foot_kpts":key_points[k].tolist(),  # 6 points
+                    "score": img_kpts[k]["score"],
+                    "center": list(img_kpts[k]["center"]),
+                    "scale": list(img_kpts[k]["scale"]),
+                } for k in range(len(img_kpts))
+            ]
             cat_results.extend(result)
 
         return cat_results

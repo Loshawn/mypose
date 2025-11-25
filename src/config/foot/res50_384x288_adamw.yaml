@@ -51,12 +51,12 @@ LOSS:
   USE_TARGET_WEIGHT: true
   USE_DIFFERENT_JOINTS_WEIGHT : true
 TRAIN:
-  BATCH_SIZE_PER_GPU: 128
+  BATCH_SIZE_PER_GPU: 64
   SHUFFLE: true
   BEGIN_EPOCH: 0
   END_EPOCH: 200
   OPTIMIZER: 'adamW'
-  LR: 1.0e-5
+  LR: 5.0e-4
   LR_BACKBONE: 1.0e-5
   CLIP_MAX_NORM: 0.1
   LR_FACTOR: 0.1
@@ -75,7 +75,7 @@ TEST:
   BBOX_THRE: 1.0
   IMAGE_THRE: 0.0
   IN_VIS_THRE: 0.2
-  MODEL_FILE: 'output/wholebody/pose_transformer/res50_384x288_adamw_lr1e-4/model_best.pth'
+  MODEL_FILE: '/home/zhhb/Projects/mypose/output/foot/pose_transformer/res50_384x288_adamw/model_best.pth'
   NMS_THRE: 1.0
   OKS_THRE: 0.9
   FLIP_TEST: true
